@@ -9,9 +9,154 @@
     --color-very-dark-blue: hsl(216, 12%, 8%);
     --font-weight-four: 400;
     --font-weight-seven: 700;
+    --color-medium-grey-opacity: hsla(216, 12%, 54%, 0.2);
+    --color-orange: hsl(25, 97%, 53%);
 }
 
 body {
     font-family: 'Overpass',
         sans-serif;
+    background-color: var(--color-very-dark-blue);
+}
+
+.container {
+    max-width: 350px;
+    background-color: var(--color-dark-blue);
+    height: 350px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    padding-left: 23px;
+    border-radius: 15px;
+}
+
+.star {
+    padding: 0.5rem;
+    border-radius: 50%;
+    margin-top: 27px;
+    margin-bottom: 15px;
+    align-self: flex-start;
+    background-color: var(--color-medium-grey-opacity);
+}
+
+.header h1 {
+    color: var(--color-white);
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-seven);
+    margin-bottom: 15px;
+}
+
+.header p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--color-medium-grey);
+    letter-spacing: 0.5px;
+    font-weight: var(--font-weight-four);
+    max-width: 350px;
+}
+
+.rating {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.rating .rate {
+    width: 3rem;
+    height: 0;
+    padding-bottom: 3rem;
+    margin: 4px;
+    border: none;
+    border-radius: 50%;
+    color: var(--color-medium-grey);
+    cursor: pointer;
+    background-color: var(--color-medium-grey-opacity);
+    line-height: 3;
+}
+
+.rating .rate:nth-child(5) {
+    margin-right: 15px;
+}
+
+.rating .rate:hover {
+    background-color: var(--color-medium-grey);
+    color: var(--color-white);
+}
+
+.rating .rate:active {
+    background-color: var(--color-orange);
+    color: var(--color-white);
+}
+
+.rating .rate:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.rating .rate:hover:before {
+    opacity: 1;
+}
+
+.submit {
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    display: block;
+    width: 310px;
+    padding: 0.7rem;
+    border: none;
+    margin-top: 20px;
+    border-radius: 25px;
+    font-weight: var(--font-weight-four);
+    letter-spacing: 0.7px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+
+.submit:active {
+    color: var(--color-orange);
+    background-color: var(--color-white);
+    cursor: pointer;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+/* This animation was referenced from the following website: 
+Link: https: //alvarotrigo.com/blog/best-css-button-hover-effects/
+
+*/
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
 }
