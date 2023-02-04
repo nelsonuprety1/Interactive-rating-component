@@ -6,34 +6,32 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
+  <link rel="stylesheet" href="/styles/style.css">
   <title>Frontend Mentor | Interactive rating component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 <body>
 
   <!-- Rating state start -->
+  <div class="container">
+    <section class="header">
+      <img src="images/icon-star.svg" class="star" alt="star-logo">
+      <h1>How did we do?</h1>
+      <p>
+        Please let us know how we did with your support request. All feedback is appreciated
+        to help us improve our offering!
+      </p>
+    </section>
 
-  How did we do?
+    <section class="rating">
+      <button class="rate">1</button>
+      <button class="rate">2</button>
+      <button class="rate">3</button>
+      <button class="rate">4</button>
+      <button class="rate">5</button>
 
-  Please let us know how we did with your support request. All feedback is appreciated
-  to help us improve our offering!
-
-  1 2 3 4 5
-
-  Submit
-
+      <button class="submit">SUBMIT</button>
+    </section>
+  </div>
   <!-- Rating state end -->
 
   <!-- Thank you state start -->
@@ -51,7 +49,8 @@
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://www.linkedin.com/in/nelson-uprety-951a2b156/" target="_blank">Nelson Uprety</a>.
+    Animation Link <a href="https://alvarotrigo.com/blog/best-css-button-hover-effects/" target="_blank">Alvarotrigo</a>
   </div>
 
   <script src="script.js"></script>
